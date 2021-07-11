@@ -15,7 +15,7 @@ function DataAge(props) {
   }
   if (age > 29) {
     message = 'Atualizado há mais de 30 minutos';
-    color = 'DarkGoldenRod'
+    color = 'DarkGoldenRod';
   }
   if (age > 59) {
     message = 'Atualizado há mais de 1 hora';
