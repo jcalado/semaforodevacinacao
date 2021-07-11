@@ -3,6 +3,8 @@
 This react-native app will consume the same data as https://covid19.min-saude.pt/cvc and present it in a friendly manner.  
 It is my first react-native app, so some things might not be 100% up to standard.
 
+![Languages](https://img.shields.io/github/languages/top/jcalado/semaforodevacinacao)
+
 # Features
 - Downloads realtime data from the API endpoint
 - Searches by location or center name
