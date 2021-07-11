@@ -16,4 +16,4 @@ It is my first react-native app, so some things might not be 100% up to standard
 ![Details page](https://i.postimg.cc/Dy6TFtT8/Screenshot-1625991778.png)
 ![More details](https://i.postimg.cc/pXRHwP3w/Screenshot-1625991789.png)
 ![Map](https://i.postimg.cc/MprJfVXw/Screenshot-1625991824.png)
-!Searching centers](https://i.postimg.cc/sg2R2wjK/Screenshot-1625991858.png)
+![Searching centers](https://i.postimg.cc/sg2R2wjK/Screenshot-1625991858.png)
