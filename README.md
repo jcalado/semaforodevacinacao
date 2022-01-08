@@ -4,6 +4,7 @@ This react-native app will consume the same data as https://covid19.min-saude.pt
 It is my first react-native app, so some things might not be 100% up to standard.
 
 ![Languages](https://img.shields.io/github/languages/top/jcalado/semaforodevacinacao)
+[![Open in Visual Studio Code](https://open.vscode.dev/badges/open-in-vscode.svg)](https://open.vscode.dev/jcalado/semaforodevacinacao)
 
 # Features
 - Downloads realtime data from the API endpoint
