@@ -32,7 +32,7 @@ function CustomNavigationBar({title, navigation, previous}) {
     <Appbar.Header style={styles.appBar}>
       {previous ? <Appbar.BackAction onPress={navigation.goBack} /> : null}
       <Appbar.Content
-        title={previous ? title : <Button>Semáforo da Vacinação</Button>}
+        title={previous ? title : <Button>Semáforo dos CVC</Button>}
       />
     </Appbar.Header>
   );

@@ -2,11 +2,20 @@ import {Colors} from 'react-native-paper';
 
 const helpers = {
   timingInfo: function timingInfo(waitTime, updated_at) {
-    const date = new Date(updated_at);
+    const pattern = /(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/;
+    const arrayDate = updated_at.match(pattern);
+    const date = new Date(
+      arrayDate[1],
+      arrayDate[2],
+      arrayDate[3],
+      arrayDate[4],
+      arrayDate[5],
+      arrayDate[6],
+    );
 
     // Data age in minutes
     var age = (new Date() - date) / 1000 / 60;
-    var updated_message;
+    var updated_message = updated_at;
 
     if (age < 29) {
       updated_message = 'Atualizado < 30min';
@@ -38,6 +47,8 @@ const helpers = {
       return '< 30min. ' + updated_message;
     } else if (waitTime.includes('N/D')) {
       return 'Sem informação. ' + updated_message;
+    } else if (waitTime.includes('Encerrado')) {
+      return 'Encerrado';
     } else {
       return waitTime;
     }
@@ -63,6 +74,10 @@ const helpers = {
 
     if (lightColor === 'red') {
       color = Colors.red700;
+    }
+
+    if (lightColor === 'encerrado') {
+      color = Colors.grey400;
     }
 
     return color;

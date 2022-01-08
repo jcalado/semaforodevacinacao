@@ -1,20 +1,9 @@
 import React, {useEffect, useState} from 'react';
 import {StyleSheet, View, FlatList, RefreshControl} from 'react-native';
-import {
-  Appbar,
-  Title,
-  ActivityIndicator,
-  Searchbar,
-  Button,
-  Colors,
-  Menu,
-  Provider,
-} from 'react-native-paper';
+import {ActivityIndicator, Searchbar} from 'react-native-paper';
 import {DefaultTheme, Provider as PaperProvider} from 'react-native-paper';
-import {set} from 'react-native-reanimated';
 
 import ListItem from '../components/ListItem';
-import AppContext from '../contexts/appContext';
 
 function compareStrings(a, b) {
   // Assuming you want case-insensitive comparison
@@ -56,7 +45,7 @@ const CentersScreen = ({navigation}) => {
   const refreshItems = props => {
     setRefreshing(false);
     console.log('Refreshed data');
-  }
+  };
 
   const theme = {
     ...DefaultTheme,

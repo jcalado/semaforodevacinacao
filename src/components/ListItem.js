@@ -19,7 +19,7 @@ const ListItem = props => {
       }
       description={queueHelpers.timingInfo(
         props.item.waitTime,
-        props.item.updated_at,
+        props.item.last_light_log_created_at,
       )}
       left={() => (
         <Avatar.Icon

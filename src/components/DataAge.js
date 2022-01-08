@@ -2,7 +2,16 @@ import React from 'react';
 import {List, Colors} from 'react-native-paper';
 
 function DataAge(props) {
-  const date = new Date(props.date);
+  const pattern = /(\d{4})-(\d{2})-(\d{2}) (\d{2}):(\d{2}):(\d{2})/;
+  const arrayDate = props.date.match(pattern);
+  const date = new Date(
+    arrayDate[1],
+    arrayDate[2],
+    arrayDate[3],
+    arrayDate[4],
+    arrayDate[5],
+    arrayDate[6],
+  );
 
   // Data age in minutes
   var age = (new Date() - date) / 1000 / 60;
@@ -11,7 +20,7 @@ function DataAge(props) {
 
   if (age < 29) {
     message = 'Atualizado há menos de 30 minutos';
-    message = 'DarkGreen';
+    color = Colors.green400;
   }
   if (age > 29) {
     message = 'Atualizado há mais de 30 minutos';

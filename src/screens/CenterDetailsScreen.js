@@ -67,21 +67,7 @@ const CenterDetailsScreen = props => {
               description={parseWaitTime(item.waitTime)}
               left={() => <List.Icon color={lightColor} icon="clock" />}
             />
-            <DataAge date={item.updated_at} />
-            <List.Item
-              title="Pessoas em espera"
-              description={
-                item.doors[0].queue.people_in_queue
-                  ? item.doors[0].queue.people_in_queue
-                  : 'Sem informação'
-              }
-              left={() => <List.Icon color={Colors.blue600} icon="account" />}
-            />
-            <List.Item
-              title="Pessoas em recobro"
-              description={item.people_in_recobro.toString()}
-              left={() => <List.Icon color={Colors.blue600} icon="account" />}
-            />
+            <DataAge date={item.last_light_log_created_at} />
           </List.Section>
           <List.Section>
             <List.Subheader>Horário</List.Subheader>
